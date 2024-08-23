@@ -8,15 +8,17 @@ jobs:
     steps:
       - name: Cheout repo
         uses: actions/checkout@v4
-        
-      - name: welcome
-        run: echo "my first action"
 
-      - name: list files
-        run: ls
+      - name: List and Read file
+        run: |
+           echo "my first github actions JOB"
+           ls -ltra
+           cat README.md  
 
-      - name: Readme file
-        run: cat README.md 
+      - name: Genrate ASCII Artwork 
+        run: cowsay -f dragan "Run for cover, I am a dragon...rawr" >> dragon.txt
+
+ 
 
       
 
